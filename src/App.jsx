@@ -1,11 +1,12 @@
 import React from 'react'
 import './App.css'
+import { AddUser } from './components'
 
 function App() {
 
   return (
     <div className="App">
-      
+      <AddUser/>
     </div>
   )
 }
