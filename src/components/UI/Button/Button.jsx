@@ -1,11 +1,11 @@
 import React from 'react'
 import {button} from './Button.module.css'
 
-const Button = ({btnType, handleClick, children}) => {
+const Button = ({type, handleClick, children}) => {
   return (
     <button 
       className={button} 
-      type={btnType || 'button'}
+      type={type || 'button'}
       onClick={handleClick}
     >
       {children}
