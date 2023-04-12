@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { input } from './AddUser.module.css'
-import { Card, Button } from '../UI'
+import { Card, Button } from '../../UI'
 
 const AddUser = () => {
   const [enteredUsername, setEnteredUsername] = useState('')
