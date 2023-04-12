@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { input } from './AddUser.module.css'
-import { Card, Button } from '../../UI'
+import { Card, Button, ErrorModal } from '../../UI'
 
 const AddUser = ({ getUsers }) => {
   const [enteredUsername, setEnteredUsername] = useState('')
@@ -32,6 +32,8 @@ const AddUser = ({ getUsers }) => {
         <input type="number" name="age" id="age" onChange={ageChangeHandler} value={enteredAge}/>
         <Button type='submit'>Add User</Button>
       </form>
+
+      <ErrorModal title={'Hello'} message={'This is an error message'}/>
     </Card>
   )
 }
