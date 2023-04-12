@@ -8,6 +8,7 @@ const AddUser = () => {
 
   const addUserHandler = (e) => {
     e.preventDefault()
+    if (enteredAge.trim().length === 0 || enteredUsername.trim().length === 0 || +enteredAge < 1) return
     console.log(enteredUsername, enteredAge);
     setEnteredAge('')
     setEnteredUsername('')
