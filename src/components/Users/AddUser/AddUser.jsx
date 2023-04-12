@@ -2,14 +2,14 @@ import React, {useState} from 'react'
 import { input } from './AddUser.module.css'
 import { Card, Button } from '../../UI'
 
-const AddUser = () => {
+const AddUser = ({ getUsers }) => {
   const [enteredUsername, setEnteredUsername] = useState('')
   const [enteredAge, setEnteredAge] = useState('')
 
   const addUserHandler = (e) => {
     e.preventDefault()
     if (enteredAge.trim().length === 0 || enteredUsername.trim().length === 0 || +enteredAge < 1) return
-    console.log(enteredUsername, enteredAge);
+    getUsers(enteredUsername, enteredAge);
     setEnteredAge('')
     setEnteredUsername('')
   }
