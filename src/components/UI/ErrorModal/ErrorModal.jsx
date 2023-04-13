@@ -3,10 +3,10 @@ import Button from '../Button/Button'
 import Card from '../Card/Card'
 import { backdrop, modal, header, content, actions } from './ErrorModal.module.css'
 
-const ErrorModal = ({title, message}) => {
+const ErrorModal = ({title, message, onConfirm}) => {
   return (
     <div>
-      <div className={backdrop}></div>
+      <div className={backdrop} onClick={onConfirm}></div>
       <Card className={modal}>
         <header className={header}>
           <h2>{title}</h2>
@@ -15,7 +15,7 @@ const ErrorModal = ({title, message}) => {
           <p>{message}</p>
         </div>
         <footer className={actions}>
-          <Button>Okay</Button>
+          <Button onClick={onConfirm}>Okay</Button>
         </footer>
       </Card>
     </div>
